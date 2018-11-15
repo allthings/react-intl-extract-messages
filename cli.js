@@ -20,18 +20,3 @@ if (!argv.out) {
 } else {
   fs.writeFileSync(path.join(process.cwd(), argv.out), messages, 'utf-8')
 }
-
-
-// [
-//   {
-//     id: 'authorized-clients-list.revoke',
-//     description: 'Revoke',
-//     defaultMessage: 'Revoke',
-//   },
-//   {
-//     id: 'authorized-clients-list.terms-of-use',
-//     description: 'Terms of use',
-//     defaultMessage: 'Terms of use',
-//   },
-//   // ...
-// ]
