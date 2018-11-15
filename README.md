@@ -10,33 +10,38 @@ yarn add @allthings/react-intl-extract-messages
 
 ## Usage
 
-This package provides a binary:
+### API
+
+```js
+// <projectRoot>/bin/extract-messages.js:
+import extractMessages from '@allthings/react-intl-extract-messages'
+
+const messages = extractMessages('../tsconfig.json')
+
+console.log(messages)
+
+// [
+//   {
+//     id: 'authorized-clients-list.revoke',
+//     description: 'Revoke',
+//     defaultMessage: 'Revoke',
+//   },
+//   {
+//     id: 'authorized-clients-list.terms-of-use',
+//     description: 'Terms of use',
+//     defaultMessage: 'Terms of use',
+//   },
+//   // ...
+// ]
+```
+
+### CLI
 
 ```bash
 react-intl-extract-messages --tsconfig tsconfig.json --out messages.json
 ```
 
 If `--out` is omitted, the output will be written to stdout.
-
------
-
-Produces something like:
-
-```json5
-[
-  {
-    "id": "authorized-clients-list.revoke",
-    "description": "Revoke",
-    "defaultMessage": "Revoke"
-  },
-  {
-    "id": "authorized-clients-list.terms-of-use",
-    "description": "Terms of use",
-    "defaultMessage": "Terms of use"
-  },
-  // ...  
-]
-```
 
 ## How
 
