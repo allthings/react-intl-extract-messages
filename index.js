@@ -30,15 +30,23 @@ function main(tsconfigFile) {
     `--outDir ${tmpDir.name}`,
     // babel-plugin-react-intl relies on imports
     `--module esnext`,
+    `--jsx preserve`,
     `--sourceMap false`,
     '--declaration false',
   ].join(' ')
 
-  // needs a spawned shell, so execFileSync doesn't work here
-  childProcess.execSync(`${typescriptBinary} ${args}`)
+  try {
+    // needs a spawned shell, so execFileSync doesn't work here
+    childProcess.execSync(`${typescriptBinary} ${args}`)
+  } catch (e) {
+    tmpDir.removeCallback()
+    throw new Error(e.stdout.toString())
+  }
 
-  const files = glob.sync(path.join(tmpDir.name, '**/*.js'))
+  const files = glob.sync(path.join(tmpDir.name, '**/*.@(js|jsx)'))
+
   const babelCompileOptions = {
+    presets: ['@babel/preset-react'],
     plugins: [
       require('@babel/plugin-syntax-dynamic-import'),
       require('babel-plugin-react-intl'),
