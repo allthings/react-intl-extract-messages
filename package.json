@@ -18,10 +18,13 @@
     "tmp": "0.0.33"
   },
   "devDependencies": {
+    "jest": "23.6.0",
     "prettier": "1.15.2"
   },
   "scripts": {
-    "postversion": "git push origin master --follow-tags && npm publish"
+    "postversion": "git push origin master --follow-tags && npm publish",
+    "pretest": "cd test/fixture-project && yarn --frozen-lockfile",
+    "test": "jest"
   },
   "prettier": {
     "semi": false,
