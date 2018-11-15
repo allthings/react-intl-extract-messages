@@ -18,7 +18,7 @@ Returns an array of messages gathered by [`babel-plugin-react-intl`](https://git
 
 ##### tsconfigFile
 
-Type: `string` 
+Type: `string`
 
 Can be absolute or relative path to the tsconfig file, all information how to build the project is taken from there.
 
@@ -57,6 +57,8 @@ If `--out` is omitted, the output will be written to stdout.
 
 Bascially it uses typescript to compile all the files to JS and then uses [`babel-plugin-react-intl`](https://github.com/yahoo/babel-plugin-react-intl) to extract the messages.
 
-## @todo
+## Tests
 
-Tests
+Run tests with `yarn run test`.
+
+This will extract messages from a fixture project and check it against a snapshot. 

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "lib": ["es6", "dom", "es2017"],
+    "target": "es5",
+    "jsx": "react"
+    // removing the following line will result in a failure with react projects
+    // "moduleResolution": "node"
+  },
+  "include": ["./src/**/*"]
+}
