@@ -19,6 +19,9 @@
   "devDependencies": {
     "prettier": "1.15.2"
   },
+  "scripts": {
+    "postversion": "git push origin master --follow-tags && npm publish"
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true,
