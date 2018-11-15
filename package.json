@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "bin": "cli.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
   "dependencies": {
     "@babel/core": "7.1.6",
     "@babel/plugin-syntax-dynamic-import": "7.0.0",
