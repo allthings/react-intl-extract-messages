@@ -13,8 +13,7 @@ function main(tsconfigFile) {
     : path.join(projectDir, tsconfigFile)
 
   if (!fs.existsSync(tsconfigFilePath)) {
-    console.log('Provide a valid tsconfig file.')
-    process.exit(1)
+    throw new Error('Provide a valid tsconfig file.')
   }
 
   // `unsafeCleanup` removes the folder recursively

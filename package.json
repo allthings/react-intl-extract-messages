@@ -24,7 +24,7 @@
   "scripts": {
     "postversion": "git push origin master --follow-tags && npm publish",
     "pretest": "cd test/fixture-project && yarn --frozen-lockfile",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "prettier": {
     "semi": false,
