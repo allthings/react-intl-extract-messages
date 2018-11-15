@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/allthings/react-intl-extract-messages.svg?branch=master)](https://travis-ci.org/allthings/react-intl-extract-messages)
+
 # react-intl-extract-messages
 
 Extracts all `react-intl` related messages in typescript based projects.
