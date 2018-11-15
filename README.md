@@ -22,7 +22,7 @@ If `--out` is omitted, the output will be written to stdout.
 
 Produces something like:
 
-```json
+```json5
 [
   {
     "id": "authorized-clients-list.revoke",
