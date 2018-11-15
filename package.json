@@ -7,6 +7,7 @@
   "engines": {
     "node": ">=8"
   },
+  "repository": "https://github.com/allthings/react-intl-extract-messages",
   "dependencies": {
     "@babel/core": "7.1.6",
     "@babel/plugin-syntax-dynamic-import": "7.0.0",

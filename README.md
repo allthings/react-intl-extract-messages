@@ -12,6 +12,16 @@ yarn add @allthings/react-intl-extract-messages
 
 ### API
 
+#### extractMessages(tsconfigFile)
+
+Returns an array of messages gathered by [`babel-plugin-react-intl`](https://github.com/yahoo/babel-plugin-react-intl).
+
+##### tsconfigFile
+
+Type: `string` 
+
+Can be absolute or relative path to the tsconfig file, all information how to build the project is taken from there.
+
 ```js
 // <projectRoot>/bin/extract-messages.js:
 import extractMessages from '@allthings/react-intl-extract-messages'
