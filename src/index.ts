@@ -90,5 +90,3 @@ export function extractMessages(tsconfigFile: string) {
 
   return messages
 }
-
-export default extractMessages
