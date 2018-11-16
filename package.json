@@ -8,7 +8,8 @@
     "dist"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=8",
+    "yarn": ">=1"
   },
   "repository": "https://github.com/allthings/react-intl-extract-messages",
   "dependencies": {
@@ -39,6 +40,7 @@
     "postversion": "git push origin master --follow-tags && npm publish",
     "pretest": "cd test/fixture-project && yarn --frozen-lockfile",
     "test": "jest --coverage",
+    "prepublishOnly": "yarn build",
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.json"
   },
