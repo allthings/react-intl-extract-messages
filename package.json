@@ -1,6 +1,6 @@
 {
   "name": "@allthings/react-intl-extract-messages",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "bin": "dist/cli.js",
   "main": "dist/index.js",
   "license": "MIT",
