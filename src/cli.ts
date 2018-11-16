@@ -1,7 +1,10 @@
 #!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const argv = require('minimist')(process.argv.slice(2))
+import fs from 'fs'
+import path from 'path'
+
+import minimist from 'minimist'
+
+const argv = minimist(process.argv.slice(2))
 const extractMessages = require('./index')
 
 if (argv.help || !argv.tsconfig) {

@@ -1,8 +1,8 @@
-const path = require('path')
-const extractMessages = require('../index')
+import { join } from 'path'
+import extractMessages from '../src/index'
 
-const tsconfig = path.join(__dirname, 'fixture-project/tsconfig.json')
-const badTsconfig = path.join(__dirname, 'fixture-project/bad-tsconfig.json')
+const tsconfig = join(__dirname, 'fixture-project/tsconfig.json')
+const badTsconfig = join(__dirname, 'fixture-project/bad-tsconfig.json')
 
 test('Extract all messages', () => {
   const messages = extractMessages(tsconfig)
@@ -11,10 +11,6 @@ test('Extract all messages', () => {
 })
 
 test('Fail with invalid non existent tsconfig file', () => {
-  expect(() => {
-    extractMessages()
-  }).toThrow()
-
   expect(() => {
     extractMessages('invalid file')
   }).toThrow()
