@@ -47,7 +47,7 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all"
   },
   "jest": {
     "preset": "ts-jest",

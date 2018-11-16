@@ -43,7 +43,7 @@ export default function main(tsconfigFile: string) {
   const typescriptBinary = path.join(
     // tsconfig dir indicates the root of the project
     path.dirname(tsconfigFilePath),
-    'node_modules/.bin/tsc'
+    'node_modules/.bin/tsc',
   )
   const args = [
     `--project ${tsconfigFilePath}`,
@@ -76,14 +76,14 @@ export default function main(tsconfigFile: string) {
     (allMessages: IntlMessage[], fileName) => {
       const result = transformFileSync(
         fileName,
-        babelCompileOptions
+        babelCompileOptions,
       ) as BabelFileResultReactIntl
 
       const { messages } = result.metadata['react-intl']
 
       return [...allMessages, ...messages]
     },
-    []
+    [],
   )
 
   tmpDir.removeCallback()

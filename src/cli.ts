@@ -9,7 +9,7 @@ const extractMessages = require('./index')
 
 if (argv.help || !argv.tsconfig) {
   console.log(
-    'Usage: message-extractor --tsconfig tsconfig.json [--out file.json]'
+    'Usage: message-extractor --tsconfig tsconfig.json [--out file.json]',
   )
   process.exit(argv.tsconfig ? 0 : 1)
 }
