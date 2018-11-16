@@ -4,7 +4,11 @@ import path from 'path'
 
 import glob from 'glob'
 import tmp from 'tmp'
-import { transformFileSync, BabelFileMetadata } from '@babel/core'
+import {
+  transformFileSync,
+  BabelFileMetadata,
+  BabelFileResult,
+} from '@babel/core'
 
 const projectDir = path.dirname(process.argv[1])
 
@@ -18,6 +22,10 @@ interface BabelMetadataReactIntl extends BabelFileMetadata {
   'react-intl': {
     messages: IntlMessage[]
   }
+}
+
+interface BabelFileResultReactIntl extends BabelFileResult {
+  metadata: BabelMetadataReactIntl
 }
 
 export default function main(tsconfigFile: string) {
@@ -66,16 +74,14 @@ export default function main(tsconfigFile: string) {
   }
   const messages: IntlMessage[] = files.reduce(
     (allMessages: IntlMessage[], fileName) => {
-      const result = transformFileSync(fileName, babelCompileOptions)
+      const result = transformFileSync(
+        fileName,
+        babelCompileOptions
+      ) as BabelFileResultReactIntl
 
-      if (result && result.metadata) {
-        const metadata = result.metadata as BabelMetadataReactIntl
-        const { messages } = metadata['react-intl']
+      const { messages } = result.metadata['react-intl']
 
-        return [...allMessages, ...messages]
-      }
-
-      return allMessages
+      return [...allMessages, ...messages]
     },
     []
   )
