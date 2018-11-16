@@ -1,5 +1,5 @@
 import { join } from 'path'
-import extractMessages from '../src/index'
+import { extractMessages } from '../src'
 
 const tsconfig = join(__dirname, 'fixture-project/tsconfig.json')
 const badTsconfig = join(__dirname, 'fixture-project/bad-tsconfig.json')

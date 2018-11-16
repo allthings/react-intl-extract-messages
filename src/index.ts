@@ -28,7 +28,7 @@ interface BabelFileResultReactIntl extends BabelFileResult {
   metadata: BabelMetadataReactIntl
 }
 
-export default function main(tsconfigFile: string) {
+export function extractMessages(tsconfigFile: string) {
   const tsconfigFilePath = path.isAbsolute(tsconfigFile)
     ? tsconfigFile
     : path.join(projectDir, tsconfigFile)
@@ -90,3 +90,5 @@ export default function main(tsconfigFile: string) {
 
   return messages
 }
+
+export default extractMessages
