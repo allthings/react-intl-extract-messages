@@ -1,13 +1,34 @@
-const childProcess = require('child_process')
-const fs = require('fs')
-const path = require('path')
-const glob = require('glob')
-const tmp = require('tmp')
-const babel = require('@babel/core')
+import childProcess from 'child_process'
+import fs from 'fs'
+import path from 'path'
+
+import glob from 'glob'
+import tmp from 'tmp'
+import {
+  transformFileSync,
+  BabelFileMetadata,
+  BabelFileResult,
+} from '@babel/core'
 
 const projectDir = path.dirname(process.argv[1])
 
-function main(tsconfigFile) {
+interface IntlMessage {
+  id: string
+  defaultMessage: string
+  description?: string
+}
+
+interface BabelMetadataReactIntl extends BabelFileMetadata {
+  'react-intl': {
+    messages: IntlMessage[]
+  }
+}
+
+interface BabelFileResultReactIntl extends BabelFileResult {
+  metadata: BabelMetadataReactIntl
+}
+
+export function extractMessages(tsconfigFile: string) {
   const tsconfigFilePath = path.isAbsolute(tsconfigFile)
     ? tsconfigFile
     : path.join(projectDir, tsconfigFile)
@@ -22,7 +43,7 @@ function main(tsconfigFile) {
   const typescriptBinary = path.join(
     // tsconfig dir indicates the root of the project
     path.dirname(tsconfigFilePath),
-    'node_modules/.bin/tsc'
+    'node_modules/.bin/tsc',
   )
   const args = [
     `--project ${tsconfigFilePath}`,
@@ -51,16 +72,21 @@ function main(tsconfigFile) {
       require('babel-plugin-react-intl'),
     ],
   }
-  const messages = files.reduce((allMessages, fileName) => {
-    const result = babel.transformFileSync(fileName, babelCompileOptions)
-    const { messages } = result.metadata['react-intl']
+  const messages: IntlMessage[] = files.reduce(
+    (allMessages: IntlMessage[], fileName) => {
+      const result = transformFileSync(
+        fileName,
+        babelCompileOptions,
+      ) as BabelFileResultReactIntl
 
-    return [...allMessages, ...messages]
-  }, [])
+      const { messages } = result.metadata['react-intl']
+
+      return [...allMessages, ...messages]
+    },
+    [],
+  )
 
   tmpDir.removeCallback()
 
   return messages
 }
-
-module.exports = main
