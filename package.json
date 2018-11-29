@@ -27,7 +27,7 @@
     "@types/babel__template": "7.0.1",
     "@types/babel__traverse": "7.0.2",
     "@types/glob": "7.1.1",
-    "@types/jest": "23.3.9",
+    "@types/jest": "23.3.10",
     "@types/minimist": "1.2.0",
     "@types/node": "10.12.10",
     "@types/tmp": "0.0.33",
