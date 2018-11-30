@@ -219,10 +219,10 @@
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
 
-"@types/babel__traverse@7.0.2":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@types/babel__traverse/-/babel__traverse-7.0.2.tgz#647310e429ec868cf5b8ee6099bee8aeae00b841"
-  integrity sha512-4a8+NaxVb66ffL1F8KEW2p9LbYsIFOwGg+OpgcOKSv+qLPFOFkNjjKpSduqxG0RMTROR172RWPuxcZdWe6SwtQ==
+"@types/babel__traverse@7.0.3":
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/@types/babel__traverse/-/babel__traverse-7.0.3.tgz#557b972fbee765cc0a07604dd2412bfffc9f2059"
+  integrity sha512-ofbx/5B7apFTkYjxFNtOWhUYKrJWMLA0MQxnHR/kuNB8Hlnkf1Ab22uvmJS1kfAvQK7PXkgC7C04JXdhL8NbFA==
   dependencies:
     "@babel/types" "^7.0.0"
 
