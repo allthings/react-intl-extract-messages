@@ -196,10 +196,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@types/babel__core@7.0.3":
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.0.3.tgz#4c8fb2afd4dbea9b0aab56f828a8adce592ef567"
-  integrity sha512-F8E0lUeQ1uaprb5dEHLdOMElH5z+hk+L/DlQykXYOvhUyPQuH+Sj4Tm0sV3W0Za2sx1YkpdNyug7P2TNetWxKQ==
+"@types/babel__core@7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.0.4.tgz#14b30c11113bad353cabfaea73e327b48edb0f0e"
+  integrity sha512-2Y2RK1BN5BRFfhneGfQA8mmFmTANbzGgS5uQPluoRqGNWb6uAcefqxzNbqgxPpmPkLqKapQfmYcyyl5iAQV+fA==
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
