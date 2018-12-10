@@ -66,7 +66,7 @@ export function extractMessages(tsconfigFile: string) {
   const files = glob.sync(path.join(tmpDir.name, '**/*.@(js|jsx)'))
 
   const babelCompileOptions = {
-    presets: ['@babel/preset-react'],
+    presets: [require('@babel/preset-react')],
     plugins: [
       require('@babel/plugin-syntax-dynamic-import'),
       require('babel-plugin-react-intl'),
