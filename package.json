@@ -33,7 +33,7 @@
     "@types/tmp": "0.0.33",
     "jest": "23.6.0",
     "prettier": "1.15.3",
-    "rimraf": "2.6.2",
+    "rimraf": "2.6.3",
     "ts-jest": "23.10.5",
     "typescript": "3.2.2"
   },
