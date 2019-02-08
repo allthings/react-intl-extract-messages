@@ -29,7 +29,7 @@
     "@types/glob": "7.1.1",
     "@types/jest": "23.3.14",
     "@types/minimist": "1.2.0",
-    "@types/node": "10.12.21",
+    "@types/node": "10.12.23",
     "@types/tmp": "0.0.33",
     "jest": "23.6.0",
     "prettier": "1.16.4",
