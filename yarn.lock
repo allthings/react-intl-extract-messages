@@ -281,18 +281,10 @@
   dependencies:
     "@babel/types" "^7.0.0"
 
-"@types/babel__template@*":
+"@types/babel__template@*", "@types/babel__template@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@types/babel__template/-/babel__template-7.0.2.tgz#4ff63d6b52eddac1de7b975a5223ed32ecea9307"
   integrity sha512-/K6zCpeW7Imzgab2bLkLEbz0+1JlFSrUMdw7KoIIu+IUdu51GWaBZpd3y1VXGVXzynvGa4DaIaxNZHiON3GXUg==
-  dependencies:
-    "@babel/parser" "^7.1.0"
-    "@babel/types" "^7.0.0"
-
-"@types/babel__template@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@types/babel__template/-/babel__template-7.0.1.tgz#8de6effa729bf0b0f65eb72399b629a3998a7f10"
-  integrity sha512-LT1zwkpL0/2oBP+npLaOCYSWv47cxbdAvONutjalMdCIBfjtfzVNnT8rgllBmsr15QAdAZDOmYw1CPhLB2JCtA==
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
