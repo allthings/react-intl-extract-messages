@@ -10,6 +10,16 @@ test('Extract all messages', () => {
   expect(messages).toMatchSnapshot()
 })
 
+test('Extract all messages with options', () => {
+  const messages = extractMessages(tsconfig, {
+    additionalComponentNames: {
+      'react-lingo': ['default', 'LingoFormattedMessage'],
+    },
+  })
+
+  expect(messages).toMatchSnapshot()
+})
+
 test('Fail with invalid non existent tsconfig file', () => {
   expect(() => {
     extractMessages('invalid file')

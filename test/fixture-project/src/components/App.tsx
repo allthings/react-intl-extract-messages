@@ -7,6 +7,7 @@ import {
   InjectedIntlProps,
 } from 'react-intl'
 import externalMessages from './messages'
+import ExtraOptions from './ExtraOptions'
 
 export interface IProps {
   name: string
@@ -34,6 +35,7 @@ function App({ name, intl }: IProps & InjectedIntlProps) {
   return (
     <div>
       <h1>
+        <ExtraOptions />
         <FormattedMessage
           id="header.hello"
           description="hello"

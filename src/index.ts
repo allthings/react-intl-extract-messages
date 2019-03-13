@@ -28,7 +28,7 @@ interface BabelFileResultReactIntl extends BabelFileResult {
   metadata: BabelMetadataReactIntl
 }
 
-export function extractMessages(tsconfigFile: string) {
+export function extractMessages(tsconfigFile: string, options?: object) {
   const tsconfigFilePath = path.isAbsolute(tsconfigFile)
     ? tsconfigFile
     : path.join(projectDir, tsconfigFile)
@@ -69,7 +69,7 @@ export function extractMessages(tsconfigFile: string) {
     presets: [require('@babel/preset-react')],
     plugins: [
       require('@babel/plugin-syntax-dynamic-import'),
-      require('babel-plugin-react-intl'),
+      [require('@allthings/babel-plugin-react-intl'), options],
     ],
   }
   const messages: IntlMessage[] = files.reduce(
