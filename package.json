@@ -13,10 +13,10 @@
   },
   "repository": "https://github.com/allthings/react-intl-extract-messages",
   "dependencies": {
+    "@allthings/babel-plugin-react-intl": "3.0.2",
     "@babel/core": "7.3.4",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/preset-react": "7.0.0",
-    "babel-plugin-react-intl": "3.0.1",
     "glob": "7.1.3",
     "minimist": "1.2.0",
     "tmp": "0.0.33"
@@ -29,16 +29,16 @@
     "@types/glob": "7.1.1",
     "@types/jest": "24.0.11",
     "@types/minimist": "1.2.0",
-    "@types/node": "10.14.1",
+    "@types/node": "11.11.3",
     "@types/tmp": "0.0.34",
     "jest": "24.5.0",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
-    "ts-jest": "23.10.5",
+    "ts-jest": "24.0.0",
     "typescript": "3.3.3333"
   },
   "scripts": {
-    "postversion": "git push origin master --follow-tags && npm publish",
+    "postversion": "git push origin master --follow-tags && yarn publish",
     "pretest": "cd test/fixture-project && yarn --frozen-lockfile",
     "test": "jest --coverage",
     "prepublishOnly": "yarn build",
