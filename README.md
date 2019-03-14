@@ -32,7 +32,7 @@ An object of options which is handed over to [`@allthings/babel-plugin-react-int
 
 ```js
 // <projectRoot>/bin/extract-messages.js:
-import extractMessages from '@allthings/react-intl-extract-messages'
+import { extractMessages } from '@allthings/react-intl-extract-messages'
 
 const messages = extractMessages('../tsconfig.json')
 
