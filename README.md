@@ -33,7 +33,9 @@ An object of options which is handed over to [`@allthings/babel-plugin-react-int
 ```js
 import { extractMessages } from '@allthings/react-intl-extract-messages'
 
-const messages = extractMessages('../tsconfig.json')
+const messages = extractMessages('../tsconfig.json', {
+  // options passed to @allthings/babel-plugin-react-intl
+})
 
 console.log(messages)
 
