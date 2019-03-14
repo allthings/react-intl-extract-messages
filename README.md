@@ -31,7 +31,6 @@ Type: `object`
 An object of options which is handed over to [`@allthings/babel-plugin-react-intl`](https://github.com/allthings/babel-plugin-react-intl#options)
 
 ```js
-// <projectRoot>/bin/extract-messages.js:
 import { extractMessages } from '@allthings/react-intl-extract-messages'
 
 const messages = extractMessages('../tsconfig.json')
