@@ -5,7 +5,7 @@ import { extractMessages } from '../src'
 const tsconfig = join(__dirname, 'fixture-project/tsconfig.json')
 const badTsconfig = join(__dirname, 'fixture-project/bad-tsconfig.json')
 
-jest.setTimeout(10000)
+jest.setTimeout(20000)
 
 test('Extract all messages', () => {
   const messages = extractMessages(tsconfig)
