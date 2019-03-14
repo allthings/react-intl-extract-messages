@@ -79,3 +79,48 @@ Array [
   },
 ]
 `;
+
+exports[`Test binary 1`] = `
+Array [
+  Object {
+    "defaultMessage": "Privacy",
+    "description": "privacy",
+    "id": "footer.privacy",
+  },
+  Object {
+    "defaultMessage": "Terms",
+    "description": "terms",
+    "id": "footer.terms",
+  },
+  Object {
+    "defaultMessage": "Settings",
+    "description": "settings",
+    "id": "footer.settings",
+  },
+  Object {
+    "defaultMessage": "Hello {name}",
+    "description": "hello",
+    "id": "header.hello",
+  },
+  Object {
+    "defaultMessage": "<a href=\\"#\\">You can change your cookie settings here</a>",
+    "description": "cookie",
+    "id": "footer.cookie",
+  },
+  Object {
+    "defaultMessage": "foo",
+    "description": "foo",
+    "id": "foo",
+  },
+  Object {
+    "defaultMessage": "bar",
+    "description": "bar",
+    "id": "bar",
+  },
+  Object {
+    "defaultMessage": "external",
+    "description": "external",
+    "id": "external.external",
+  },
+]
+`;
