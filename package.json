@@ -36,7 +36,7 @@
     "rimraf": "2.7.1",
     "ts-jest": "24.3.0",
     "ts-node": "8.6.2",
-    "typescript": "3.8.2"
+    "typescript": "3.8.3"
   },
   "scripts": {
     "postversion": "git push origin master --follow-tags && yarn publish",
