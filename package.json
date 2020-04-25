@@ -19,7 +19,7 @@
     "@babel/preset-react": "7.9.4",
     "glob": "7.1.6",
     "minimist": "1.2.5",
-    "tmp": "0.1.0"
+    "tmp": "0.2.0"
   },
   "devDependencies": {
     "@types/babel__core": "7.1.7",
